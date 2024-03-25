@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.worksans {
+    font-family: "Work Sans", sans-serif;
+}
+
+.playfair {
+    font-family: "Playfair Display", serif;
+}
+
+.menu li > *:not(ul, .menu-title, details, .btn):active,
+.menu li > *:not(ul, .menu-title, details, .btn).active,
+.menu li > details > summary:active {
+    border: 1px solid #23be0a;
+    background: transparent;
+    color: #23be0a;
+}
