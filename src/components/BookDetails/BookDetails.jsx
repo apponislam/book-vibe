@@ -8,7 +8,7 @@ const BookDetails = () => {
     // console.log(bookAll);
 
     const book = bookAll.find((book) => book.bookId === numID);
-    console.log(book);
+    // console.log(book);
 
     // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
     const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
