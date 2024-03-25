@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookDetails = () => {
     const bookAll = useLoaderData();
@@ -9,9 +11,11 @@ const BookDetails = () => {
 
     const book = bookAll.find((book) => book.bookId === numID);
     // console.log(book);
-
     // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
     const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
+
+    const notify = () => toast("Wow so easy!");
+    const notify2 = () => toast("Wow so easy!");
 
     return (
         <div className="grid grid-cols-2 gap-12 mb-40">
@@ -51,10 +55,15 @@ const BookDetails = () => {
                     <p className="font-semibold">{rating}</p>
                 </div>
                 <div className="worksans text-[18px]">
-                    <button className="btn text-black bg-transparent border border-black mr-4 py-[18px] px-[28px] h-auto">Read</button>
-                    <button className="btn bg-[#50B1C9] text-white py-[18px] px-[28px] h-auto">Wishlist</button>
+                    <button onClick={notify} className="btn text-black bg-transparent border border-black mr-4 py-[18px] px-[28px] h-auto">
+                        Read
+                    </button>
+                    <button onClick={notify2} className="btn bg-[#50B1C9] text-white py-[18px] px-[28px] h-auto">
+                        Wishlist
+                    </button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

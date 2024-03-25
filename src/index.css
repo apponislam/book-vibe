@@ -18,3 +18,23 @@
     background: transparent;
     color: #23be0a;
 }
+
+.react-tabs__tab-list {
+    border-bottom: 1px solid #1313134d !important;
+    margin: 0 0 32px !important;
+    padding: 0;
+}
+
+.react-tabs__tab {
+    font-family: "Work Sans", sans-serif;
+    padding: 14px 18px !important;
+    font-size: 18px;
+    color: #131313 !important;
+}
+
+.react-tabs__tab--selected {
+    background: #fff;
+    border-color: #aaa;
+    color: black;
+    border-radius: 10px 10px 0 0 !important;
+}
