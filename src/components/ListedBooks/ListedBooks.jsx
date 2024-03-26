@@ -73,7 +73,7 @@ const ListedBooks = () => {
     }, [books]);
 
     return (
-        <div>
+        <div className="mb-28">
             <div className="bg-[#1313130D] rounded-3xl p-9 mb-8">
                 <h1 className="worksans font-bold text-[28px] text-center">Books</h1>
             </div>

@@ -10,6 +10,8 @@ import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import PageToRead from "./components/PageToRead/PageToRead.jsx";
 import { toast } from "react-toastify";
 import { getReadBooks, getWishListBooks, setReadBooks, setWishListBooks } from "./Utility/localStorage.js";
+import Upcoming from "./components/Upcoming/Upcoming.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 const readBtn = (book) => {
     const id = book.bookId;
@@ -124,6 +126,15 @@ const router = createBrowserRouter([
                 path: "/PageToRead",
                 loader: () => fetch("books.json"),
                 element: <PageToRead></PageToRead>,
+            },
+            {
+                path: "/Upcoming",
+                loader: () => fetch("upcoming.json"),
+                element: <Upcoming></Upcoming>,
+            },
+            {
+                path: "/Contact",
+                element: <Contact></Contact>,
             },
         ],
     },

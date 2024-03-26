@@ -2,10 +2,11 @@ import PropTypes from "prop-types";
 import { CiLocationOn } from "react-icons/ci";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { LuBookOpenCheck } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const ListCard = ({ book }) => {
     // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
-    const { image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating } = book;
+    const { image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating, bookId } = book;
     return (
         <div className="border border-[#13131326] rounded-2xl p-6 mb-6">
             <div className="flex gap-6">
@@ -40,7 +41,9 @@ const ListCard = ({ book }) => {
                     <div className="flex items-center worksans gap-3">
                         <button className="btn py-3 px-5 h-auto rounded-3xl text-[#328EFF] bg-[#328EFF26]">Category: {category}</button>
                         <button className="btn py-3 px-5 h-auto rounded-3xl text-[#FFAC33] bg-[#FFAC3326]">Rating: {rating}</button>
-                        <button className="btn py-3 px-5 h-auto rounded-3xl text-white bg-[#23BE0A] font-medium text-[18px]">View Details</button>
+                        <Link to={`/${bookId}`}>
+                            <button className="btn py-3 px-5 h-auto rounded-3xl text-white bg-[#23BE0A] font-medium text-[18px]">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>

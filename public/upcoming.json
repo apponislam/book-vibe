@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "bookName": "The Midnight Library",
+        "author": "Matt Haig",
+        "image": "https://i.ibb.co/C9vs2Fg/The-Midnight-Library.png",
+        "review": "A heartwarming and thought-provoking novel that explores the choices we make in life.",
+        "totalPages": 288,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": ["Fantasy", "Contemporary"],
+        "publisher": "Viking",
+        "yearOfPublishing": 2020
+    },
+    {
+        "id": 2,
+        "bookName": "Project Hail Mary",
+        "author": "Andy Weir",
+        "image": "https://i.ibb.co/M5RGwtf/Project-Hail-Mary.png",
+        "review": "A gripping science fiction thriller that will keep you on the edge of your seat until the very end.",
+        "totalPages": 496,
+        "rating": 4.8,
+        "category": "Science Fiction",
+        "tags": ["Space", "Adventure"],
+        "publisher": "Ballantine Books",
+        "yearOfPublishing": 2021
+    },
+    {
+        "id": 3,
+        "bookName": "Malibu Rising",
+        "author": "Taylor Jenkins Reid",
+        "image": "https://i.ibb.co/ZcqGFJQ/Malibu-Rising.png",
+        "review": "An engrossing family drama set against the backdrop of 1980s Malibu.",
+        "totalPages": 384,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": ["Historical", "Family"],
+        "publisher": "Ballantine Books",
+        "yearOfPublishing": 2021
+    },
+    {
+        "id": 4,
+        "bookName": "Klara and the Sun",
+        "author": "Kazuo Ishiguro",
+        "image": "https://i.ibb.co/xLr1Bms/Klara-and-the-Sun.png",
+        "review": "A haunting and beautifully written exploration of artificial intelligence and humanity.",
+        "totalPages": 320,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": ["Science Fiction", "Dystopian"],
+        "publisher": "Knopf",
+        "yearOfPublishing": 2021
+    },
+    {
+        "id": 5,
+        "bookName": "The Song of Achilles",
+        "author": "Madeline Miller",
+        "image": "https://i.ibb.co/6WW479Y/The-Song-of-Achilles.png",
+        "review": "A mesmerizing retelling of the myth of Achilles and Patroclus, filled with love, passion, and tragedy.",
+        "totalPages": 368,
+        "rating": 4.7,
+        "category": "Historical Fiction",
+        "tags": ["Mythology", "Romance"],
+        "publisher": "Ecco",
+        "yearOfPublishing": 2011
+    },
+    {
+        "id": 6,
+        "bookName": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "image": "https://i.ibb.co/XXB9R7P/The-Night-Circus.png",
+        "review": "An enchanting and magical tale set in a mysterious circus that appears only at night.",
+        "totalPages": 400,
+        "rating": 4.6,
+        "category": "Fantasy",
+        "tags": ["Magical Realism", "Romance"],
+        "publisher": "Doubleday",
+        "yearOfPublishing": 2011
+    }
+]

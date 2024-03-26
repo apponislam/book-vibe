@@ -21,10 +21,16 @@ const Header = () => {
                             <li>
                                 <NavLink to="/PageToRead">Pages to Read</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/Upcoming">Upcoming</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/Contact">Contact</NavLink>
+                            </li>
                         </ul>
                     </div>
                     <Link to="/">
-                        <p className="btn btn-ghost text-3xl font-bold">Book Vibe</p>
+                        <p className="btn btn-ghost text-3xl font-bold">Appon Book Vibe</p>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -37,6 +43,12 @@ const Header = () => {
                         </li>
                         <li>
                             <NavLink to="/PageToRead">Pages to Read</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/Upcoming">Upcoming</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/Contact">Contact</NavLink>
                         </li>
                     </ul>
                 </div>
