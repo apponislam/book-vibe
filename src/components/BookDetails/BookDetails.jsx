@@ -1,9 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PropTypes from "prop-types";
 
-const BookDetails = ({ readBtn }) => {
+const BookDetails = ({ readBtn, wishListBtn }) => {
     const bookAll = useLoaderData();
     const id = useParams();
     const numID = parseInt(id.bookId);
@@ -16,7 +16,6 @@ const BookDetails = ({ readBtn }) => {
     const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
 
     // const notify = () => toast("Wow so easy!");
-    const notify2 = () => toast("Wow so easy!");
 
     return (
         <div className="grid grid-cols-2 gap-12 mb-40">
@@ -59,7 +58,7 @@ const BookDetails = ({ readBtn }) => {
                     <button onClick={() => readBtn(book)} className="btn text-black bg-transparent border border-black mr-4 py-[18px] px-[28px] h-auto">
                         Read
                     </button>
-                    <button onClick={notify2} className="btn bg-[#50B1C9] text-white py-[18px] px-[28px] h-auto">
+                    <button onClick={() => wishListBtn(book)} className="btn bg-[#50B1C9] text-white py-[18px] px-[28px] h-auto">
                         Wishlist
                     </button>
                 </div>
@@ -71,5 +70,6 @@ const BookDetails = ({ readBtn }) => {
 
 BookDetails.propTypes = {
     readBtn: PropTypes.func,
+    wishListBtn: PropTypes.func,
 };
 export default BookDetails;

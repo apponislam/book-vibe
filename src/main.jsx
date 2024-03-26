@@ -9,14 +9,27 @@ import Error from "./components/Error/Error.jsx";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import PageToRead from "./components/PageToRead/PageToRead.jsx";
 import { toast } from "react-toastify";
-import { setReadBooks } from "./Utility/localStorage.js";
+import { setReadBooks, setWishListBooks } from "./Utility/localStorage.js";
 
 const readBtn = (book) => {
-    // console.log("Button clicked!", book);
     const id = book.bookId;
-    // console.log(id);
     setReadBooks(id);
     toast.success("Book Added to Read List", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+};
+
+const wishListBtn = (book) => {
+    const id = book.bookId;
+    setWishListBooks(id);
+    toast.success("Book Added to WishList", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -43,7 +56,7 @@ const router = createBrowserRouter([
                 path: "/:bookId",
                 // loader: ({ params }) => fetch(`books.json/${params.bookId}`),
                 loader: () => fetch("books.json"),
-                element: <BookDetails readBtn={readBtn}></BookDetails>,
+                element: <BookDetails readBtn={readBtn} wishListBtn={wishListBtn}></BookDetails>,
             },
             {
                 path: "/ListedBooks",
