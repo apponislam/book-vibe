@@ -74,7 +74,7 @@ const ListedBooks = () => {
 
     return (
         <div className="mb-28">
-            <div className="bg-[#1313130D] rounded-3xl p-9 mb-8">
+            <div className="bg-[#1313130D] rounded-3xl p-9 mb-8 mx-3 md:mx-0">
                 <h1 className="worksans font-bold text-[28px] text-center">Books</h1>
             </div>
             <div className="flex justify-center mb-14">
@@ -87,28 +87,30 @@ const ListedBooks = () => {
                     </ul>
                 </details>
             </div>
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
-                    <Tab>Read Books</Tab>
-                    <Tab>Wishlist Books</Tab>
-                </TabList>
-                <TabPanel>
-                    {/* <h1>Read Books {bookReadList.length}</h1> */}
-                    <div>
-                        {displayBookList.map((book) => (
-                            <ListCard key={book.bookId} book={book}></ListCard>
-                        ))}
-                    </div>
-                </TabPanel>
-                <TabPanel>
-                    {/* <h1>Read Books {wishList.length}</h1> */}
-                    <div>
-                        {displayWishList.map((book) => (
-                            <ListCard key={book.bookId} book={book}></ListCard>
-                        ))}
-                    </div>
-                </TabPanel>
-            </Tabs>
+            <div className="mx-3 md:mx-0">
+                <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+                    <TabList>
+                        <Tab>Read Books</Tab>
+                        <Tab>Wishlist Books</Tab>
+                    </TabList>
+                    <TabPanel>
+                        {/* <h1>Read Books {bookReadList.length}</h1> */}
+                        <div>
+                            {displayBookList.map((book) => (
+                                <ListCard key={book.bookId} book={book}></ListCard>
+                            ))}
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        {/* <h1>Read Books {wishList.length}</h1> */}
+                        <div>
+                            {displayWishList.map((book) => (
+                                <ListCard key={book.bookId} book={book}></ListCard>
+                            ))}
+                        </div>
+                    </TabPanel>
+                </Tabs>
+            </div>
         </div>
     );
 };

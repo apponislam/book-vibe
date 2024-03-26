@@ -1,10 +1,10 @@
 const Contact = () => {
     return (
         <div>
-            <div className="bg-[#1313130D] rounded-3xl p-9 mb-8">
+            <div className="bg-[#1313130D] rounded-3xl p-9 mb-8 mx-3 md:mx-0">
                 <h1 className="worksans font-bold text-[28px] text-center">Contact Us</h1>
             </div>
-            <div className="bg-[#1313130D] rounded-3xl p-9 mb-8">
+            <div className="bg-[#1313130D] rounded-3xl p-3 md:p-9 mb-8 mx-3 md:mx-0">
                 <div className="grid grid-cols-2 gap-5 mb-5">
                     <input type="text" placeholder="Name" className="input input-bordered w-full" />
                     <label className="input input-bordered flex items-center gap-2">

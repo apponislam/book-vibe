@@ -38,7 +38,7 @@ const PageToRead = () => {
     }, [books]);
 
     return (
-        <div className="w-full bg-[#13131308] p-24 rounded-3xl mb-32 flex justify-center items-center">
+        <div className="w-auto bg-[#13131308] p-3 md:p-24 rounded-3xl mb-32 md:flex justify-center items-center mx-3 md:mx-0 overflow-x-scroll">
             <BarChart
                 className="w-full"
                 width={1000}

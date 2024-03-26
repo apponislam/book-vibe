@@ -7,7 +7,7 @@ const Book = ({ book }) => {
     const { bookId, image, bookName, author, category, rating, tags } = book;
     return (
         <Link to={`/${bookId}`}>
-            <div className="border border-[#13131326] p-6 rounded-2xl">
+            <div className="border border-[#13131326] p-6 rounded-2xl w-auto mx-3">
                 <img className="w-full mb-6" src={image} alt="" />
                 <ul className="mb-4 flex items-center gap-3">
                     {tags.map((tag, idx) => (

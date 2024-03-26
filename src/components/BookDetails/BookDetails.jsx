@@ -18,7 +18,7 @@ const BookDetails = ({ readBtn, wishListBtn }) => {
     // const notify = () => toast("Wow so easy!");
 
     return (
-        <div className="grid grid-cols-2 gap-12 mb-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 mb-40 mx-3 md:mx-0">
             <div>
                 <img className="w-full" src={image} />
             </div>
@@ -39,19 +39,19 @@ const BookDetails = ({ readBtn, wishListBtn }) => {
                     ))}
                 </ul>
                 <div className="flex items-center mb-3 worksans">
-                    <p className="w-56">Number of Pages : </p>
-                    <p className="font-semibold">{totalPages}</p>
+                    <p className="w-44 md:w-56">Number of Pages : </p>
+                    <p className="font-semibold"> {totalPages}</p>
                 </div>
                 <div className="flex items-center mb-3 worksans">
-                    <p className="w-56">Publisher : </p>
+                    <p className="w-44 md:w-56">Publisher : </p>
                     <p className="font-semibold">{publisher}</p>
                 </div>
                 <div className="flex items-center mb-3 worksans">
-                    <p className="w-56">Year of Publishing : </p>
+                    <p className="w-44 md:w-56">Year of Publishing : </p>
                     <p className="font-semibold">{yearOfPublishing}</p>
                 </div>
                 <div className="flex items-center mb-3 worksans">
-                    <p className="w-56">Rating : </p>
+                    <p className="w-44 md:w-56">Rating : </p>
                     <p className="font-semibold">{rating}</p>
                 </div>
                 <div className="worksans text-[18px]">
