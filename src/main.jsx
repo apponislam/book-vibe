@@ -13,11 +13,10 @@ import { getReadBooks, getWishListBooks, setReadBooks, setWishListBooks } from "
 
 const readBtn = (book) => {
     const id = book.bookId;
-    setReadBooks(id);
     const readedItems = getReadBooks();
     console.log(readedItems);
     if (readedItems.includes(id)) {
-        toast.error("Book Already Have Been Added", {
+        toast.error("You Have Already Read This Book", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -28,6 +27,7 @@ const readBtn = (book) => {
             theme: "light",
         });
     } else {
+        setReadBooks(id);
         toast.success("Book Added to Read List", {
             position: "top-right",
             autoClose: 5000,
@@ -43,31 +43,58 @@ const readBtn = (book) => {
 
 const wishListBtn = (book) => {
     const id = book.bookId;
-    setWishListBooks(id);
     const wishListedItems = getWishListBooks();
     console.log(wishListedItems);
-    if (wishListedItems.includes(id)) {
-        toast.error("Book Already in WishList", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
+    const readedItems = getReadBooks();
+    if (readedItems.includes(id)) {
+        if (wishListedItems.includes(id)) {
+            toast.error("Book Already in WishList", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        } else {
+            toast.error("You Have Already Read This Book", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
     } else {
-        toast.success("Book Added to WishList", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        });
+        setWishListBooks(id);
+        if (wishListedItems.includes(id)) {
+            toast.error("Book Already in WishList", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        } else {
+            toast.success("Book Added to WishList", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
     }
 };
 
