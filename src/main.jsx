@@ -9,36 +9,66 @@ import Error from "./components/Error/Error.jsx";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import PageToRead from "./components/PageToRead/PageToRead.jsx";
 import { toast } from "react-toastify";
-import { setReadBooks, setWishListBooks } from "./Utility/localStorage.js";
+import { getReadBooks, getWishListBooks, setReadBooks, setWishListBooks } from "./Utility/localStorage.js";
 
 const readBtn = (book) => {
     const id = book.bookId;
     setReadBooks(id);
-    toast.success("Book Added to Read List", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-    });
+    const readedItems = getReadBooks();
+    console.log(readedItems);
+    if (readedItems.includes(id)) {
+        toast.error("Book Already Have Been Added", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    } else {
+        toast.success("Book Added to Read List", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 };
 
 const wishListBtn = (book) => {
     const id = book.bookId;
     setWishListBooks(id);
-    toast.success("Book Added to WishList", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-    });
+    const wishListedItems = getWishListBooks();
+    console.log(wishListedItems);
+    if (wishListedItems.includes(id)) {
+        toast.error("Book Already in WishList", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    } else {
+        toast.success("Book Added to WishList", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 };
 
 const router = createBrowserRouter([
