@@ -4,7 +4,6 @@ import Book from "../Book/Book";
 
 const Home = () => {
     const books = useLoaderData();
-    // console.log(books);
 
     return (
         <div>
@@ -13,7 +12,7 @@ const Home = () => {
                     <h1 className="font-bold text-[56px] mb-12 playfair">
                         Books to freshen up <br /> your bookshelf
                     </h1>
-                    <Link>
+                    <Link to="/ListedBooks">
                         <button className="worksans btn mr-4 font-bold bg-[#23BE0A] py-[18px] px-7 text-white h-auto text-[20px]">View The List</button>
                     </Link>
                 </div>

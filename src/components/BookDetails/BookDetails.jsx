@@ -1,8 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PropTypes from "prop-types";
 
-const BookDetails = () => {
+const BookDetails = ({ readBtn }) => {
     const bookAll = useLoaderData();
     const id = useParams();
     const numID = parseInt(id.bookId);
@@ -14,7 +15,7 @@ const BookDetails = () => {
     // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
     const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
 
-    const notify = () => toast("Wow so easy!");
+    // const notify = () => toast("Wow so easy!");
     const notify2 = () => toast("Wow so easy!");
 
     return (
@@ -55,7 +56,7 @@ const BookDetails = () => {
                     <p className="font-semibold">{rating}</p>
                 </div>
                 <div className="worksans text-[18px]">
-                    <button onClick={notify} className="btn text-black bg-transparent border border-black mr-4 py-[18px] px-[28px] h-auto">
+                    <button onClick={() => readBtn(book)} className="btn text-black bg-transparent border border-black mr-4 py-[18px] px-[28px] h-auto">
                         Read
                     </button>
                     <button onClick={notify2} className="btn bg-[#50B1C9] text-white py-[18px] px-[28px] h-auto">
@@ -68,4 +69,7 @@ const BookDetails = () => {
     );
 };
 
+BookDetails.propTypes = {
+    readBtn: PropTypes.func,
+};
 export default BookDetails;
