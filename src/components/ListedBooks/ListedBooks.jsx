@@ -52,7 +52,7 @@ const ListedBooks = () => {
                     <Tab>Wishlist Books</Tab>
                 </TabList>
                 <TabPanel>
-                    <h1>Read Books {bookReadList.length}</h1>
+                    {/* <h1>Read Books {bookReadList.length}</h1> */}
                     <div>
                         {bookReadList.map((book) => (
                             <ListCard key={book.bookId} book={book}></ListCard>
@@ -60,7 +60,7 @@ const ListedBooks = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <h1>Read Books {wishList.length}</h1>
+                    {/* <h1>Read Books {wishList.length}</h1> */}
                     <div>
                         {wishList.map((book) => (
                             <ListCard key={book.bookId} book={book}></ListCard>
