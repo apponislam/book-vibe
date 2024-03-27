@@ -6,9 +6,9 @@ const UpcomingBook = ({ book }) => {
     const { image, bookName, author, category, rating, tags } = book;
 
     return (
-        <div className="border border-[#13131326] p-6 rounded-2xl mx-3 md:mx-0">
+        <div className="border border-[#13131326] p-3 md:p-6 rounded-2xl mx-3 md:mx-0">
             <img className="w-full mb-6" src={image} alt="" />
-            <ul className="mb-4 flex items-center gap-3">
+            <ul className="mb-4 flex items-center gap-3 flex-wrap">
                 {tags.map((tag, idx) => (
                     <li className="bg-[#23BE0A0D] text-[#23BE0A] py-2 px-4 rounded-2xl font-medium worksans" key={idx}>
                         {tag}

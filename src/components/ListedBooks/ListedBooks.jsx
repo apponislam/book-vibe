@@ -5,6 +5,7 @@ import "../../index.css";
 import { useLoaderData } from "react-router-dom";
 import { getReadBooks, getWishListBooks } from "../../Utility/localStorage";
 import ListCard from "../ListCard/ListCard";
+import { IoIosArrowDown } from "react-icons/io";
 
 const ListedBooks = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -79,11 +80,19 @@ const ListedBooks = () => {
             </div>
             <div className="flex justify-center mb-14">
                 <details className="dropdown w-40">
-                    <summary className="m-1 btn bg-[#23BE0A] w-full text-white worksans font-semibold text-[18px]">Sort By</summary>
+                    <summary className="m-1 btn bg-[#23BE0A] w-full text-white worksans font-semibold text-[18px]">
+                        Sort By <IoIosArrowDown />
+                    </summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-full text-center worksans gap-3">
-                        <li onClick={() => handleClick("Rating")}>Rating</li>
-                        <li onClick={() => handleClick("Number of pages")}>Number of pages</li>
-                        <li onClick={() => handleClick("Publisher year")}>Publisher year</li>
+                        <li className="hover:bg-[#23BE0A] hover:text-white rounded-md cursor-pointer" onClick={() => handleClick("Rating")}>
+                            Rating
+                        </li>
+                        <li className="hover:bg-[#23BE0A] hover:text-white rounded-md cursor-pointer" onClick={() => handleClick("Number of pages")}>
+                            Number of pages
+                        </li>
+                        <li className="hover:bg-[#23BE0A] hover:text-white rounded-md cursor-pointer" onClick={() => handleClick("Publisher year")}>
+                            Publisher year
+                        </li>
                     </ul>
                 </details>
             </div>

@@ -20,7 +20,7 @@ const BookDetails = ({ readBtn, wishListBtn }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 mb-40 mx-3 md:mx-0">
             <div>
-                <img className="w-full" src={image} />
+                <img className="w-full object-cover h-full" src={image} />
             </div>
             <div>
                 <h1 className="font-bold text-[30px] playfair mb-4">{bookName}</h1>
